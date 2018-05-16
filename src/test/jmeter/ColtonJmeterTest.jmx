@@ -96,7 +96,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\Users\beckc\JMeter\apache-jmeter-4.0\bin\COLTONSTESTRESULTS1.jmx</stringProp>
+          <stringProp name="filename">apache-jmeter-4.0\bin\COLTONSTESTRESULTS1.jmx</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
@@ -133,7 +133,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">C:\Users\beckc\JMeter\apache-jmeter-4.0\bin\COLTONSTESTRESULTS.jmx</stringProp>
+        <stringProp name="filename">apache-jmeter-4.0\bin\COLTONSTESTRESULTS.jmx</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
