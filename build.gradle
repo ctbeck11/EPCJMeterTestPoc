@@ -13,7 +13,7 @@ apply plugin: "net.foragerr.jmeter"
 
  task runApplicationTest << {
      jmeter {
-  jmTestFiles = [file("https://github.com/ctbeck11/EPCJMeterTestPoc/tree/master/apache-jmeter-4.0/bin/examples/ColtonJmeterTest.jmx")] //if jmx file is not in the default location
+  jmTestFiles = [file("src/test/jmeter/ColtonJmeterTest.jmx")] //if jmx file is not in the default location
   // jmSystemPropertiesFiles= [file("src/test/jmeter/jmeter.properties")] to add additional system properties
   enableExtendedReports = true //produce Graphical and CSV reports
 }
