@@ -13,7 +13,7 @@ apply plugin: "net.foragerr.jmeter"
 
  task runApplicationTest << {
      jmeter {
-  jmTestFiles = [file("src/test/jmeter/ColtonJmeterTest.jmx")] //if jmx file is not in the default location
+  jmTestFiles = [file("src/test/jmeter/ColtonJvmeterTest.jmx")] //if jmx file is not in the default location
   // jmSystemPropertiesFiles= [file("src/test/jmeter/jmeter.properties")] to add additional system properties
 }
  }
