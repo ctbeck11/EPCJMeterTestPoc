@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+       jcenter()
+    }
+    dependencies {
+      classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
+    }
+	plugins {
+  id "net.foragerr.jmeter" version "1.0.5-2.13"
+}
+ }
+
+ import groovyx.net.http.RESTClient
+ import groovyx.net.http.HTTPBuilder
+ import groovyx.net.http.EncoderRegistry
+ import static groovyx.net.http.ContentType.TEXT
+ import static groovyx.net.http.ContentType.URLENC
+ import org.apache.http.client.methods.HttpGet
+ import org.apache.http.HttpRequestInterceptor
+ import org.apache.http.protocol.HttpContext
+ import org.apache.http.HttpRequest
+ import org.apache.http.HttpResponse
+ import javax.xml.transform.*
+ import javax.xml.transform.stream.*
+ import org.apache.commons.codec.binary.Base64
+
+ task runApplicationTest << {
+     jmeter {
+  jmTestFiles = [file("https://github.com/ctbeck11/EPCJMeterTestPoc/tree/master/apache-jmeter-4.0/bin/examples/ColtonJmeterTest.jmx")] //if jmx file is not in the default location
+  // jmSystemPropertiesFiles= [file("src/test/jmeter/jmeter.properties")] to add additional system properties
+  enableExtendedReports = true //produce Graphical and CSV reports
+}
+ }
