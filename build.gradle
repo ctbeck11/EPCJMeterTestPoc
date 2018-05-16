@@ -15,6 +15,6 @@ apply plugin: "net.foragerr.jmeter"
      jmeter {
   jmTestFiles = [file("src/test/jmeter/ColtonJvmeterTest.jmx")] //if jmx file is not in the default location
   // jmSystemPropertiesFiles= [file("src/test/jmeter/jmeter.properties")] to add additional system properties
-}
 gradle jmrun
+  }
  }
