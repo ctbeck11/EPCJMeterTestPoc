@@ -14,8 +14,18 @@ apply plugin: "net.foragerr.jmeter"
  task runApplicationTest << {
      jmeter {
   jmTestFiles = [file("src/test/jmeter/ColtonJmeterTest.jmx")] //if jmx file is not in the default location
+  csvLogFile = false
+  resultsLog = new File(project.buildDir, "jmeter-report/loadtest-results.xml")
   // jmSystemPropertiesFiles= [file("src/test/jmeter/jmeter.properties")] to add additional system properties
 
   }
+  afterEvaluate {
+    def jMeterExt = project.extensions.findByName("jmeter")
+    jMeterExt.metaClass.enableReports = true
+    jMeterExt.metaClass.enableExtendedReports = false
+    jMeterExt.metaClass.reportTitle = null
+    jMeterExt.metaClass.reportPostfix = ""
+    jMeterExt.metaClass.reportXslt = "$project.projectDir/jmeter-results-detail-report_21.xsl"
+}
 
  }
